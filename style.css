@@ -1,6 +1,11 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-color: rgb(249, 231, 194);
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 #navbar{
@@ -36,6 +41,10 @@ nav{
     /* font-family: 'Lugrasimo', cursive; */
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.1rem;
+}
+
+#navbar li a:hover{
+    color: rgb(192, 194, 165);
 }
 
 #navbar li:nth-child(6){
@@ -74,4 +83,45 @@ nav{
 
 .row p a{
     text-decoration: none;
+}
+
+.top{
+    
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* font-family: 'Lugrasimo', cursive; */
+    font-style: italic;
+    /* border: 2px solid white; */
+}
+
+#head{
+    padding: 23px;
+    font-family: 'Tektur', cursive;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.contact{
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.contact a{
+    text-decoration: none;
+}
+
+.contact:hover{
+    font-weight: bold;
+}
+
+#mid-contact{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 500px;
+    padding: 23px;
+    padding-top: 13px;
 }

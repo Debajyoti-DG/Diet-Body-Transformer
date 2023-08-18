@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+}
+.roadmap-container{
+    display: flex;
+    justify-content: space-around;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+#navbar li{
+    padding: 23px;
+    justify-content: space-between;
+}
+
+#navbar li a{
+    padding: 23px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* #navbar li:nth-child(6){
+    margin-left: 20px;
+    justify-self: flex-end;
+} */

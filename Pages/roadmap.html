@@ -7,11 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- <style>
+        body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* #navbar{
+    background-color: black;
+    opacity: 0.75;
+    z-index: -1;
+    width: 100vw;
+
+} */
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+#navbar li{
+    padding: 23px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#navbar li a{
+    padding: 13px;
+    font-size: 1rem;
+    text-decoration: none;
+    /* color: white; */
+    z-index: 1;
+}
+
+/* #navbar li:nth-child(6){
+    margin-left: 20px;
+    justify-self: flex-end;
+} */
+
+.container{
+    display: flex;
+}
+.roadmap-container{
+    display: flex;
+    justify-content: space-around;
+}
+.goal{
+    border: 2px solid red;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    padding: 23px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.row{
+    margin-top: 5rem;
+}
+#row-1{
+    margin-top: 10rem;
+}
+#row-2{
+    justify-content: space-evenly; 
+}
+
+.row p a{
+    text-decoration: none;
+}
+    </style> -->
+
+
     <div class="container">
         <nav id="navbar">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/roadmap">Roadmap</a></li>
+                <li><a href="/roadmap.html">Roadmap</a></li>
                 <li><a href="/general">General</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/others">Others</a></li>
@@ -20,14 +91,14 @@
         </nav>
     </div>
 
-    <div class="roadmap-container">
-        <div id="item-1">This is item 1</div>
-        <div id="item-2">This is item 2</div>
-        <div id="item-3">This is item 3</div>
+    <div class="roadmap-container row" id="row-1">
+        <div class="goal" id="item-1"><p><a href="/">Gain Weight</a></p></div>
+        <div class="goal" id="item-2"><p><a href="/">Loose Weight</a></p></div>
+        <div class="goal" id="item-3"><p><a href="/">Build Muscle</a></p></div>
     </div>
-    <div class="roadmap-container">
-        <div id="item-4">This is item 4</div>
-        <div id="item-5">This is item 5</div>
+    <div class="roadmap-container row" id="row-2">
+        <div class="goal" id="item-4"><p><a href="/">Get Fit</a></p></div>
+        <div class="goal" id="item-5"><p><a href="/">Be Flexy</a></p></div>
     </div>
 </body>
 </html>

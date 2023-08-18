@@ -11,6 +11,7 @@ const port = 3000;
 
 const index = fs.readFileSync("./index.html");
 const roadmap = fs.readFileSync("./roadmap.html");
+const css = fs.readFileSync("./style.css");
 // const fitness = fs.readFileSync("./Fitness.html");
 // const contact = fs.readFileSync("./Contact.html");
 

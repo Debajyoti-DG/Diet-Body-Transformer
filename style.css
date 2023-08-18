@@ -12,8 +12,7 @@ html{
     background-color: black;
     opacity: 0.75;
     /* z-index: -1; */
-    width: 100vw;
-
+    width: 100dvw;
 }
 nav{
     display: flex;
@@ -124,4 +123,76 @@ nav{
     width: 500px;
     padding: 23px;
     padding-top: 13px;
+}
+
+#form{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    flex-direction: column;
+}
+
+.profile input{
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+.profile form {
+    width: 100%;
+}
+
+.profile label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.profile #submit{
+    /* margin: auto; */
+    padding: 10px;
+    margin-left: 80px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+
+/* .profile #submit:hover{
+   color: aquamarine;
+} */
+#age{
+    margin-left: 29px;
+}
+#email, #name{
+    margin-left: 6px;
+}
+.form-group{
+    padding: 3px;
+}
+#gender{
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 8.5px;
+    width: 416px;
+    margin-left: 3px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+/* utility */
+
+.container h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 7rem;
 }

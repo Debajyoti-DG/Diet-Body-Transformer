@@ -57,6 +57,25 @@ nav{
 .container{
     display: flex;
 }
+.button{
+    display: block;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    /* height: 200px;
+    width: 200px; */
+    border: 2px solid red;
+    width: 60dvw;
+    height: 40vh;
+}
+.button h2{
+    font-size: 4rem;
+    
+}
+.button p{
+    font-size: 1.5rem;
+    padding: 7px;
+}
 .roadmap-container{
     display: flex;
     justify-content: space-around;
@@ -71,8 +90,16 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 50px;
+    left: 100px;
 }
 
+#our-goal{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
 .row{
     margin-top: 5rem;
 }

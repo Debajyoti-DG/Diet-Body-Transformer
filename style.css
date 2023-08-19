@@ -1,0 +1,242 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(249, 231, 194);
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    background-color: black;
+    opacity: 0.75;
+    /* z-index: -1; */
+    width: 100dvw;
+}
+nav{
+    display: flex;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    /* background-color: black;
+    opacity: 0.75;
+    width: 100vw; */
+    /* color: white; */
+}
+#navbar li{
+    padding: 23px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#navbar li a{
+    padding: 13px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    /* font-family: 'Tektur', cursive; */
+    /* font-family: 'Lugrasimo', cursive; */
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+#navbar li a:hover{
+    color: rgb(192, 194, 165);
+}
+
+#navbar li:nth-child(6){
+    display: inline-block ;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+}
+
+.container{
+    display: flex;
+}
+.header{
+    margin-top: 4rem;
+    display: block;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    /* height: 200px;
+    width: 200px; */
+    /* border: 2px solid red; */
+    width: 60dvw;
+    height: 40vh;
+}
+.header h2{
+    font-size: 4rem;
+    padding-bottom: 0px;
+}
+.header p{
+    font-size: 1.5rem;
+    padding: 7px;
+}
+
+.button{
+    
+}
+
+#btn-1, #btn-2{
+    padding: 7px;
+    width: 80px;
+    border-radius: 7px;
+}
+
+button a{
+    text-decoration: none;
+    
+}
+.roadmap-container{
+    display: flex;
+    justify-content: space-around;
+}
+.goal{
+    border: 2px solid red;
+    display: flex;
+    height: 100px;
+    width: 100px;
+    padding: 23px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 50px;
+    left: 100px;
+}
+
+#our-goal{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    margin-top: 5rem;
+}
+
+#row-2{
+    justify-content: space-evenly; 
+}
+
+.row p a{
+    text-decoration: none;
+}
+
+.top{
+    
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* font-family: 'Lugrasimo', cursive; */
+    font-style: italic;
+    /* border: 2px solid white; */
+}
+
+#head{
+    padding: 23px;
+    font-family: 'Tektur', cursive;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.contact{
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.contact a{
+    text-decoration: none;
+}
+
+.contact:hover{
+    font-weight: bold;
+}
+
+#mid-contact{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 500px;
+    padding: 23px;
+    padding-top: 13px;
+}
+
+#form{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    flex-direction: column;
+}
+
+.profile input{
+    width: 400px;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+.profile form {
+    width: 100%;
+}
+
+.profile label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.profile #submit{
+    /* margin: auto; */
+    padding: 10px;
+    margin-left: 80px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+
+/* .profile #submit:hover{
+   color: aquamarine;
+} */
+#age{
+    margin-left: 29px;
+}
+#email, #name{
+    margin-left: 6px;
+}
+.form-group{
+    padding: 3px;
+}
+#gender{
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 8.5px;
+    width: 416px;
+    margin-left: 3px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+/* utility */
+
+.container h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 7rem;
+}

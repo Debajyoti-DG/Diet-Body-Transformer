@@ -57,24 +57,40 @@ nav{
 .container{
     display: flex;
 }
-.button{
+.header{
+    margin-top: 4rem;
     display: block;
     position: absolute;
     text-align: center;
     justify-content: center;
     /* height: 200px;
     width: 200px; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 60dvw;
     height: 40vh;
 }
-.button h2{
+.header h2{
     font-size: 4rem;
-    
+    padding-bottom: 0px;
 }
-.button p{
+.header p{
     font-size: 1.5rem;
     padding: 7px;
+}
+
+.button{
+    
+}
+
+#btn-1, #btn-2{
+    padding: 7px;
+    width: 80px;
+    border-radius: 7px;
+}
+
+button a{
+    text-decoration: none;
+    
 }
 .roadmap-container{
     display: flex;

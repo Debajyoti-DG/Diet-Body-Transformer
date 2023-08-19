@@ -23,11 +23,25 @@
         </nav>
     </div>
 
-    <div class="roadmap-container row" id="row-1">
-        
-        <div class="goal" id="item-1"><p><a href="/secondary.html">Gain Weight</a></p></div>
-        <div class="goal" id="item-2"><p><a href="/secondary.html">Loose Weight</a></p></div>
+    <div class="heading">
+        <div class="roadmap-heading">
+            <p id="bigger">This is your personalised Roadmap</p>
+            <p id="ask-goal">What is your Goal ?</p>
+        </div>
     </div>
+
+    <div class="roadmap-container row" id="row-1">
+        <div class="goal" id="item-1"><p><a href="#secondary" onclick="show_hide()">Gain Weight</a></p></div>
+        <div class="goal" id="item-2"><p><a href="#secondary" onclick="show_hide()">Loose Weight</a></p></div>
+    </div>
+
+    <section id="secondary">
+            <div class="roadmap-container row" id="row-2" style="display: none;">
+                <div class="goal" id="item-3"><p><a href="/">Build Muscle</a></p></div>
+                <div class="goal" id="item-4"><p><a href="/">Get Fit</a></p></div>
+                <div class="goal" id="item-5"><p><a href="/">Be Flexy</a></p></div>
+            </div>
+    </section>
    
     <script src="server.js"></script>
 </body>

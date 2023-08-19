@@ -1,10 +1,8 @@
-body{
+*{
     margin: 0px;
     padding: 0px;
-    background-color: rgb(249, 231, 194);
-    height: 100%;
+    /* background-color: rgb(249, 231, 194); */
 }
-
 html{
     scroll-behavior: smooth;
 }
@@ -12,6 +10,8 @@ html{
 #navbar{
     background-color: black;
     opacity: 0.75;
+    display: flex;
+    position: sticky;
     /* z-index: -1; */
     width: 100dvw;
 }
@@ -50,15 +50,25 @@ nav{
 #navbar li:nth-child(6){
     display: inline-block ;
     position: absolute;
-    top: 15px;
+    top: 0px;
     right: 35px;
 }
-
-.container{
-    display: flex;
+#navbar li:nth-child(1){
+    margin-left: 3rem;
+}
+#home::before {
+    content: "";
+    background: url('Background.jpg') no-repeat center center/cover !important;
+    position: absolute;
+    height: 802px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 1.2;
+    z-index: -2;
 }
 .header{
-    margin-top: 4rem;
+    margin-top: 10rem;
     display: block;
     position: absolute;
     text-align: center;
@@ -70,31 +80,48 @@ nav{
     height: 40vh;
 }
 .header h2{
-    font-size: 4rem;
+    font-size: 4.5rem;
     padding-bottom: 0px;
+    padding: 20px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
 }
 .header p{
+    margin-top: 10px;
     font-size: 1.5rem;
     padding: 7px;
+    padding-left: 162px;
+    padding-right: 118px;
+    color: white;
 }
 
 .button{
-    
 }
 
 #btn-1, #btn-2{
+    margin-top: 20px;
     padding: 7px;
     width: 80px;
     border-radius: 7px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
 }
 
 button a{
     text-decoration: none;
     
 }
+
+#secondary{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 .roadmap-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 .goal{
     border: 2px solid red;
@@ -102,7 +129,9 @@ button a{
     height: 100px;
     width: 100px;
     padding: 23px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    border-radius: 20px;
+    margin: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -117,17 +146,44 @@ button a{
     align-items: center;
 }
 .row{
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 #row-2{
-    justify-content: space-evenly; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .row p a{
     text-decoration: none;
 }
+.heading{
+    margin-top: 50px;
+    display: flex;
+    border: 2px solid red;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.roadmap-heading p{
+    display: flex;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    justify-content: center;
+    margin: 20px;
+}
 
+#bigger{
+    font-size: 4rem;
+}
+#ask-goal{
+    font-size: 2rem;
+}
 .top{
     
     margin-top: 6rem;
@@ -162,7 +218,7 @@ button a{
     text-align: center;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(255, 0, 0);
     border-radius: 20px;
     width: 500px;
     padding: 23px;
@@ -170,7 +226,8 @@ button a{
 }
 
 #form{
-    margin-top: 5rem;
+    margin-top: 46rem;
+    padding-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,7 +243,15 @@ button a{
 form{
     flex-direction: column;
 }
-
+.form-container::before {
+    content: "";
+    position: absolute;
+    background: url('background3.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 540px;
+    opacity: 0.75;
+    z-index: -1;
+}
 .profile input{
     width: 400px;
     padding: 0.5rem;
@@ -213,7 +278,7 @@ form{
 }
 
 /* .profile #submit:hover{
-   color: aquamarine;
+    color: aquamarine;
 } */
 #age{
     margin-left: 29px;
@@ -238,5 +303,19 @@ form{
 
 .container h1{
     font-family: 'Rajdhani', sans-serif;
-    font-size: 7rem;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-weight:bolder;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 20rem;
+    text-align: center;
+    margin-left: 70px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    color: white;
+}
+.container{
+    display: flex;
 }

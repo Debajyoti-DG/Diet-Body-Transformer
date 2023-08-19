@@ -54,8 +54,6 @@ server.listen(port, local_host, () => {
 function ajaxpost () {
 
 
-
-
     // // (A) GET FORM DATA
     // var data = new FormData(document.getElementById("myForm"));
    

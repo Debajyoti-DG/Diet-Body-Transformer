@@ -49,3 +49,60 @@ server.listen(port, local_host, () => {
 });
 
 // console.log("kfhsiffdruighdiguhrfiogdkjgsedrifjofihdrfejgjkdrfslknkf");
+
+
+function ajaxpost () {
+
+
+
+
+    // // (A) GET FORM DATA
+    // var data = new FormData(document.getElementById("myForm"));
+   
+    // // (B) AJAX REQUEST
+    // // (B1) POST DATA TO SERVER, RETURN RESPONSE AS TEXT
+    // fetch("1c-server.html", { method:"POST", body:data })
+    // .then(res => res.text())
+   
+    // // (B2) SHOW MESSAGE ON SERVER RESPONSE
+    // .then(response => {
+    //   console.log(response);
+    //   if (response == "OK") { 
+    //     alert("SUCCESSFUL!"); 
+    // }
+    //   else { 
+    //     alert("FAILURE!"); 
+    // }
+    // })
+   
+    // // (B3) OPTIONAL - HANDLE FETCH ERROR
+    // .catch(err => console.error(err));
+   
+    // // (C) PREVENT FORM SUBMIT
+    // return false;
+
+
+    var data = new FormData();
+    data.append("name", document.getElementById("name").value);
+    data.append("email", document.getElementById("email").value);
+    data.append("age", document.getElementById("age").value);
+    data.append("height", document.getElementById("height").value);
+    data.append("weight", document.getElementById("weight").value);
+
+
+    var http = new XMLHttpRequest();
+    http.open("POST", "dummy.php");
+    http.onload = function(){
+        // alert(this.response);
+        alert("Success");
+    }
+    http.send(data);
+
+    return false;
+
+}
+
+
+function display(){
+    
+}

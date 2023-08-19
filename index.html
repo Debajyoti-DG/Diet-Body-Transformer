@@ -37,7 +37,7 @@
     <div class="container" id="form">
         <h1>Welcome</h1>
         <div class="profile">
-            <form action="server.js">
+            <form id = "myForm" onsubmit="return ajaxpost();">
                 <div class="form-group">
                     <label for="name">Name : </label>
                     <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -52,11 +52,11 @@
                 </div>
                 <div class="form-group">
                     <label for="height">Height : </label>
-                    <input type="text" name="height" id="height" placeholder="Enter your height">
+                    <input type="text" name="height" id="height" placeholder="Enter your height(in cm)">
                 </div>
                 <div class="form-group">
                     <label for="weight">Weight : </label>
-                    <input type="text" name="weight" id="weight" placeholder="Enter your weight">
+                    <input type="text" name="weight" id="weight" placeholder="Enter your weight(in kg)">
                 </div>
                 <div class="form-group">
                     <label for="gender">Gender: </label>

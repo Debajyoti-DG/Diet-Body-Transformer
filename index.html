@@ -15,20 +15,7 @@
 </head>
 
 <body>
-    <!-- <style>
-        #home::before {
-            content: "";
-            background: url('Background.jpg') no-repeat center center/cover !important;
-            position: absolute;
-            height: 802px;
-            width: 100%;
-            top: 0px;
-            left: 0px;
-            opacity: 1.2;
-            z-index: -2;
-        }
-        
-    </style> -->
+
     <div class="container">
         <nav id="navbar">
             <ul>
@@ -47,12 +34,41 @@
             <h2>WELCOME TO DRS-179</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eveniet minima. Dolorum doloribus ut quas mollitia adipisci? Beatae, ipsam quas.</p>
             <div id="button">
-                <button id="btn-2"><a href="#myForm">Sign Up</a></button>
-                <button id="btn-1"><a href="/">Log In</a></button>
+                <button id="show-signup"><a href="#myForm">Sign Up</a></button>
+                <button id="show-login"><a href="#login">Log In</a></button>
             </div>
         </div>
 
     </div>
+
+    <div class="popup" id="login">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            <div class="form-element">
+                <label for="remember-me">Remember me</label>
+                <input type="checkbox" id="remember-me" required>
+            </div>
+            <div class="form-element">
+                <!-- Point to the address remaining -->
+                <button>Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <section class="form-container">
         <div class="container" id="form">

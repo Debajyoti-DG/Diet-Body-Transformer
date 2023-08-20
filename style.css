@@ -131,6 +131,7 @@ button a{
     width: 100%;
     opacity: 1;
     z-index: -3;
+    margin-top: 500px;
 }
 .roadmap-container{
     display: flex;
@@ -141,11 +142,11 @@ button a{
     border: 2px solid rgb(113, 112, 112);
     background-color: rgb(152, 147, 147);
     display: flex;
-    height: 65px;
+    height: 85px;
     width: 115px;
     padding: 23px;
     /* border-radius: 50%; */
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 20px;
     justify-content: center;
     align-items: center;
@@ -161,7 +162,8 @@ button a{
     align-items: center;
 }
 .row{
-    margin-top: 4rem;
+    display: flex;
+    margin-top: 75px;
 }
 
 #row-2{
@@ -179,30 +181,27 @@ button a{
 }
 
 #item-3,#item-4,#item-5{
-    position: relative;
-    top: 40px;
-    left: 170px;
-    height: 50px;
-    width: 70px;
-    margin-bottom: 50px;
-}
-#item-3{
-    margin-left: 450px !important;
+    
+    height: 90px;
     width: 130px;
+    margin-bottom: 50px;
+    margin: 20px;
 }
+#item-3,#item-4,#item-5,#item-heading{
+    margin-top: 15rem;
+}
+
 #item-heading{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 752px;
-    left: 70px;
     border: 2px solid red;
     width: 470px;
     height: 100px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 2rem;
-    margin-bottom: 50px;
+    background: none !important;
+    margin-right: 100px;
 }
 #item-heading:hover{
     background-color: none !important;
@@ -226,11 +225,11 @@ button a{
     justify-content: center;
     margin: 20px;
 }
-#roadmap::before {
+.roadmap-container::before {
     content: "";
     background: url('background5.jpg') no-repeat center center/cover !important;
     position: absolute;
-    height: 702px;
+    height: 802px;
     width: 100%;
     top: 0px;
     left: 0px;
@@ -238,11 +237,11 @@ button a{
     z-index: -2;
 }
 #bigger{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 #ask-goal{
     font-size: 2rem;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .top{
     
@@ -410,7 +409,7 @@ form{
     opacity: 1;
     transform: translate(-50%,-50%) scale(1);
     transition: top 0ms ease-in-out 0ms,
-                opacity 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
                 transform 200ms ease-in-out 0ms;
 }
 .popup .close-btn{

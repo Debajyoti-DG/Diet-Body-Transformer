@@ -209,7 +209,7 @@ nav{
 .heading{
     margin-top: 50px;
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 20px;
     text-align: center;
     align-items: center;
@@ -224,6 +224,7 @@ nav{
     font-family: 'Rajdhani', sans-serif;
     justify-content: center;
     margin: 20px;
+    border-radius: 10px;
 }
 .roadmap-container::before {
     content: "";
@@ -238,6 +239,7 @@ nav{
 }
 #bigger{
     font-size: 3rem;
+    color: brown;
 }
 #ask-goal{
     font-size: 2rem;

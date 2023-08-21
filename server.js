@@ -56,12 +56,12 @@
 
 //     // // (A) GET FORM DATA
 //     // var data = new FormData(document.getElementById("myForm"));
-   
+
 //     // // (B) AJAX REQUEST
 //     // // (B1) POST DATA TO SERVER, RETURN RESPONSE AS TEXT
 //     // fetch("1c-server.html", { method:"POST", body:data })
 //     // .then(res => res.text())
-   
+
 //     // // (B2) SHOW MESSAGE ON SERVER RESPONSE
 //     // .then(response => {
 //     //   console.log(response);
@@ -72,10 +72,10 @@
 //     //     alert("FAILURE!"); 
 //     // }
 //     // })
-   
+
 //     // // (B3) OPTIONAL - HANDLE FETCH ERROR
 //     // .catch(err => console.error(err));
-   
+
 //     // // (C) PREVENT FORM SUBMIT
 //     // return false;
 
@@ -102,7 +102,7 @@
 
 
 // function display(){
-    
+
 // }
 
 
@@ -113,15 +113,20 @@ function show_hide() {
         x.style.display = 'flex';
         x.style.justifyContent = 'center';
         x.style.alignItems = 'center';
-        
+
+        // After opening the bottom section
+        // console.log(window.outerHeight)
+        window.scrollTo(0, window.outerHeight)
     } else {
         x.style.display = 'none';
     }
 }
 
-document.querySelector("#show-login").addEventListener("click",function(){
+document.querySelector("#show-login").addEventListener("click", function () {
+    console.log("Clicked...")
     document.querySelector(".popup").classList.add("active");
 });
-document.querySelector(".popup .close-btn").addEventListener("click",function(){
+
+document.querySelector(".popup .close-btn").addEventListener("click", function () {
     document.querySelector(".popup").classList.remove("active");
 });

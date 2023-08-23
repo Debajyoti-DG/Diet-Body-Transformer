@@ -1,36 +1,23 @@
-# from flask import Flask
-# app = Flask(__name__)
-
-# @app.route("/")
-# def home():
-#     return "Hello, Flask!"
-
-import re
-from datetime import datetime
-
-from flask import Flask
+from flask import Flask,render_template
+import requests
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
-    return "Hello, Flask!"
+    # return "<p>Hello, World!!!!!</p>"
+    return render_template('index.html')
+# @app.route("/")
+# def home():
+#     # return "<p>Hello, World!!!!!</p>"
+#     return render_template('style.css')
 
+@app.route("/roadmap")
+def roadmap():
+    # return "<p>Hello, World!!!!!</p>"
+    return render_template('roadmap.html')
 
-@app.route("/hello/<name>")
-def hello_there(name):
-    now = datetime.now()
-    formatted_now = now.strftime("%A, %d %B, %Y at %X")
-
-    # Filter the name argument to letters only using regular expressions. URL arguments
-    # can contain arbitrary text, so we restrict to safe characters only.
-    match_object = re.match("[a-zA-Z]+", name)
-
-    if match_object:
-        clean_name = match_object.group(0)
-    else:
-        clean_name = "Friend"
-
-    content = "Hello there, " + clean_name + "! It's " + formatted_now
-    return content
+@app.route("/contact")
+def contact():
+    # return "<p>Hello, World!!!!!</p>"
+    return render_template('contact.html')

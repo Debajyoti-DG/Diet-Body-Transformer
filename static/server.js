@@ -133,5 +133,5 @@ document.querySelector(".popup .close-btn").addEventListener("click", function (
 
 document.getElementById("redirectButton").addEventListener("click", () => {
     // if ()
-    window.location = "/roadmap.html";
+    window.location = "/roadmap";
 });

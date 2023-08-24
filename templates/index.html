@@ -52,7 +52,7 @@
             </div>
             <div class="form-element">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password" required>
+                <input type="password" id="password-popup" placeholder="Enter password" required>
             </div>
             <div class="form-element">
                 <label for="remember-me">Remember me</label>
@@ -75,31 +75,35 @@
         <div class="container" id="form">
             <h1>Your Form</h1>
             <div class="profile">
-                <form id = "myForm" action="/roadmap.html">
+                <form id = "myForm" action="/" method="post">
                     <div class="form-group">
                         <label for="name">Name : </label>
-                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        <input type="text" name="name" id="name" value="Test Name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email : </label>
-                        <input type="text" name="email" id="email" placeholder="Enter your email" required>
+                        <input type="text" name="email" value="test@test.mail" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password : </label>
+                        <input type="password" name="password" value="sjygsjy#dfj@" id="password" placeholder="Enter your password" required>
                     </div>
                     <div class="form-group">
                         <label for="age">Age: </label>
-                        <input type="number" name="age" id="age" placeholder="Enter your age" required>
+                        <input type="number" name="age" id="age" value="12" placeholder="Enter your age" required>
                     </div>
                     <div class="form-group">
                         <label for="height">Height : </label>
-                        <input type="number" name="height" id="height" placeholder="Enter your height(in cm)" required>
+                        <input type="number" name="height" id="height" value="25" placeholder="Enter your height(in cm)" required>
                     </div>
                     <div class="form-group">
                         <label for="weight">Weight : </label>
-                        <input type="number" name="weight" id="weight" placeholder="Enter your weight(in kg)" required>
+                        <input type="number" name="weight" id="weight" value="56" placeholder="Enter your weight(in kg)" required>
                     </div>
                     <div class="form-group">
                         <label for="gender">Gender: </label>
                         <select name="gender" id="gender" required> 
-                            <option value="Male">Male</option> 
+                            <option selected value="Male">Male</option> 
                             <option value="Female">Female</option> 
                             <option value="Transgender">Transgender</option> 
                             <option value="Non-Binary">Non-Binary</option> 

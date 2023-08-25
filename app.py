@@ -1,9 +1,19 @@
 from flask import Flask,render_template,request
 import requests
 from flask_sqlalchemy import SQLAlchemy
+import json
+
+local_server= True
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/diet_body_transformer'
+
+if(local_server):
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+
 db = SQLAlchemy(app)
 
 class users(db.Model):
@@ -37,7 +47,7 @@ def home():
         db.session.add(entry)
         db.session.commit()
 
-    return render_template('index.html')
+    return render_template('index.html', params=params)
 
 
 # @app.route("/")
@@ -48,9 +58,9 @@ def home():
 @app.route("/roadmap")
 def roadmap():
     # return "<p>Hello, World!!!!!</p>"
-    return render_template('roadmap.html')
+    return render_template('roadmap.html', params=params)
 
 @app.route("/contact")
 def contact():
     # return "<p>Hello, World!!!!!</p>"
-    return render_template('contact.html')
+    return render_template('contact.html', params=params)

@@ -78,3 +78,13 @@ def roadmap():
 def contact():
     # return "<p>Hello, World!!!!!</p>"
     return render_template('contact.html', params=params)
+
+@app.route("/barriers")
+def barriers():
+    # return "<p>Hello, World!!!!!</p>"
+    return render_template('barriers.html', params=params)
+
+@app.route("/dashboard")
+def dashboard():
+    # return "<p>Hello, World!!!!!</p>"
+    return render_template('dashboard.html', params=params)

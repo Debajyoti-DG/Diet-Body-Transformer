@@ -1,5 +1,7 @@
 from flask import Flask,render_template,request
 import requests
+#refer to flask mail documentaion for more info
+from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
 import json
 
@@ -8,6 +10,14 @@ with open('config.json', 'r') as c:
     params = json.load(c)["params"]
 
 app = Flask(__name__)
+app.config.update(
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = '465',
+    MAIL_USE_SSL = True,
+    MAIL_USERNAME = params['gmail_user'],
+    MAIL_PASSWORD = params['gmail_password']
+)
+mail = Mail(app)
 
 if(local_server):
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
@@ -46,6 +56,10 @@ def home():
         entry = users(name=name, email=email, height=height, weight=weight, age=age, gender=gender, password=password_user)
         db.session.add(entry)
         db.session.commit()
+        mail.send_message('New message from ' + params['name'], 
+                          sender = email, recipients = [params['gmail_user']], 
+                          body = "Hello this is a mail from DRS to test if there is error in authenticaton SMTP. \n If you are reading this then your : " + "\nHeight : " + height + " cms"  # type: ignore
+                          )
 
     return render_template('index.html', params=params)
 

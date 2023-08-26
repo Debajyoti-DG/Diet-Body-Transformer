@@ -5,8 +5,10 @@
         "local_uri": "mysql://root:@localhost/diet_body_transformer",
         "prod_uri" : "mysql://root:@localhost/diet_body_transformer",
         "facebook_url" : "facebook.com",
-        "instagram_url" : "instagram.com",
+        "instagram_url" : "instagram.com", 
         "github_url" : "github.com",
-        "name" : "Drs1790"
+        "name" : "DRS-179",
+        "gmail_user" : "thehecker18@gmail.com",
+        "gmail_password" : "btfb kxbx iorc jdik"
     }
 }

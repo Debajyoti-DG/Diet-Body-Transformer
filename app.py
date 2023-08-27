@@ -1,9 +1,18 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for,session
 import requests
 #refer to flask mail documentaion for more info
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
+from flask_mysqldb import MySQL
+import MySQLdb.cursors
 import json
+import re
+
+
+
+
+
+
 
 local_server= True
 with open('config.json', 'r') as c:
@@ -15,9 +24,80 @@ app.config.update(
     MAIL_PORT = '465',
     MAIL_USE_SSL = True,
     MAIL_USERNAME = params['gmail_user'],
-    MAIL_PASSWORD = params['gmail_password']
+    MAIL_PASSWORD = params['gmail_password'],
+    SQLALCHEMY_DATABASE_URI = 'mysql:///users.db',
+    SECRET_KEY = 'FSDFFS2748347ybfjdkFhsfziugcfgtghfxl'
 )
 mail = Mail(app)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#code for connection
+#MySQL Hostname
+# app.config['MYSQL_HOST'] = 'localhost'
+#MySQL username
+# app.config['MYSQL_USER'] = 'root'
+#MySQL password here in my case password is null so i left empty
+# app.config['MYSQL_PASSWORD'] = ''
+#Database name In my case database name is projectreporting
+app.config['MYSQL_DB'] = ''
+
+mysql = MySQL(app)
+
+
+
+# @app.route('/')
+# @app.route('/dashboard',methods=['GET','POST'])
+# def projectlist():
+
+
+    #placed in dashboard
+
+    # #creating variable for connection
+    # cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    # #executing query
+    # cursor.execute("select * from pro_reg")
+    # #fetching all records from database
+    # data=cursor.fetchall()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if(local_server):
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
@@ -64,11 +144,6 @@ def home():
     return render_template('index.html', params=params)
 
 
-# @app.route("/")
-# def home():
-#     # return "<p>Hello, World!!!!!</p>"
-#     return render_template('style.css')
-
 @app.route("/roadmap")
 def roadmap():
     # return "<p>Hello, World!!!!!</p>"
@@ -84,7 +159,18 @@ def barriers():
     # return "<p>Hello, World!!!!!</p>"
     return render_template('barriers.html', params=params)
 
-@app.route("/dashboard")
+@app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
     # return "<p>Hello, World!!!!!</p>"
+
+
+    # # At night
+
+    # #creating variable for connection
+    # cursor=mysql.connect.cursor()
+    # #executing query
+    # cursor.execute("select * from pro_reg")
+    # #fetching all records from database
+    # data=cursor.fetchall()
+
     return render_template('dashboard.html', params=params)

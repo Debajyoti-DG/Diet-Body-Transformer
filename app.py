@@ -8,7 +8,10 @@ import MySQLdb.cursors
 import json
 import re
 import mysql.connector
+from flask_cors import CORS
 
+
+from sqlalchemy import types
 
 
 
@@ -19,6 +22,9 @@ with open('config.json', 'r') as c:
     params = json.load(c)["params"]
 
 app = Flask(__name__)
+CORS(app)
+
+
 app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = '465',
@@ -124,9 +130,16 @@ class users(db.Model):
     height = db.Column(db.String(6), unique=False)
     weight = db.Column(db.String(6), unique=False)
     gender = db.Column(db.String(12), unique=False)
-    email = db.Column(db.String(120), unique=True)
+    # email = db.Column(db.String(120), unique=True)
 
+    sql_Query = "INSERT INTO `users` ( `name`, `email`, `password`, `age`, `height`, `weight`, `gender`) VALUES ('name', 'email', 'password', 'age', 'height', 'weight', 'gender');"
+    
+    
+    # "INSERT INTO `users` ( `name`, `email`, `password`, `age`, `height`, `weight`, `gender`) VALUES ('Saptarshi', 'saptarshi@gmail.com', 'hello 123', '16', '24', '50', 'male');"
 
+   
+
+    print(sql_Query)
 
 # if(local_server):
 #     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
@@ -174,8 +187,9 @@ def home():
                           body = "Hello this is a mail from DRS to test if there is error in authenticaton SMTP. \n If you are reading this then your : " + "\nHeight : " + height + " cms"  # type: ignore
                           )
 
-    return render_template('index.html', params=params)
+    return "Hello"
 
+# CORS 
 
 @app.route("/roadmap")
 def roadmap():

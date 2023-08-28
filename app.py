@@ -7,7 +7,7 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import json
 import re
-
+import mysql.connector
 
 
 
@@ -25,23 +25,10 @@ app.config.update(
     MAIL_USE_SSL = True,
     MAIL_USERNAME = params['gmail_user'],
     MAIL_PASSWORD = params['gmail_password'],
-    SQLALCHEMY_DATABASE_URI = 'mysql:///users.db',
+    SQLALCHEMY_DATABASE_URI = '.db',
     SECRET_KEY = 'FSDFFS2748347ybfjdkFhsfziugcfgtghfxl'
 )
 mail = Mail(app)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -54,11 +41,50 @@ mail = Mail(app)
 # app.config['MYSQL_USER'] = 'root'
 #MySQL password here in my case password is null so i left empty
 # app.config['MYSQL_PASSWORD'] = ''
-#Database name In my case database name is projectreporting
-app.config['MYSQL_DB'] = ''
+# Database name In my case database name is projectreporting
+
+
+
+
+app.config['MYSQL_DB'] = 'diet_body_transformer'
 
 mysql = MySQL(app)
 
+# cursor = mysql.connection.cursor()
+
+
+
+
+
+# if request.method == 'POST':
+
+
+#COPIED DOWN UNDER /LOGIN BELOW
+
+# id = request.form['id']
+# name = request.form['name']
+# email = request.form['email']
+# age = request.form['email']
+# height = request.form['height']
+# weight = request.form['weight']
+# gender = request.form['gender']
+# password = request.form['password']
+# created_at = request.form['created_at']
+
+
+
+
+
+
+
+# cursor.execute(
+#     users (id, name, email, age, height, weight, gender, password))
+# cursor.execute(
+#     users VALUES(%d, %s, %s, %s, %s, %s, %s, %s), (id, name, email, age, height, weight, gender, password)
+# )
+
+# mysql.connection.commit()
+# cursor.close()
 
 
 # @app.route('/')
@@ -74,27 +100,6 @@ mysql = MySQL(app)
     # cursor.execute("select * from pro_reg")
     # #fetching all records from database
     # data=cursor.fetchall()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -120,6 +125,34 @@ class users(db.Model):
     weight = db.Column(db.String(6), unique=False)
     gender = db.Column(db.String(12), unique=False)
     email = db.Column(db.String(120), unique=True)
+
+
+
+# if(local_server):
+#     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+# else:
+#     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
+
+# db = SQLAlchemy(app)
+
+
+
+
+
+# class choices(db.Model):
+
+#     '''
+#     gain_weight lose_weight build_muscle get_fit be_flexy
+#     '''
+#     # id = db.Column(db.Integer, primary_key=True)
+#     gain_weight = db.Column(db.String(15), unique=False)
+#     lose_weight = db.Column(db.String(15), unique=False)
+#     build_muscle = db.Column(db.String(15), unique=False)
+#     get_fit = db.Column(db.String(15), unique=False)
+#     be_flexy = db.Column(db.String(15), unique=False)
+
+
+
 
 
 @app.route("/", methods = ['GET', 'POST'])
@@ -161,16 +194,61 @@ def barriers():
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
-    # return "<p>Hello, World!!!!!</p>"
+
+    print("Hello Dashboard")
+    connection = MySQLdb.connect(host='localhost',database='diet',user='root',password='')
+    sql_select_Query = "select * from users"
+    print("next")
+
+    cursor = connection.cursor()
+    cursor.execute(sql_select_Query)
 
 
-    # # At night
+    records = cursor.fetchall()
+    print("Total number of rows in table: ", cursor.rowcount)
 
-    # #creating variable for connection
-    # cursor=mysql.connect.cursor()
-    # #executing query
-    # cursor.execute("select * from pro_reg")
-    # #fetching all records from database
-    # data=cursor.fetchall()
+    print("\nPrinting each row")
+    for row in records:
+        print("Id = ", row[0], )
+        print("Name = ", row[1])
+        print("Password  = ", row[2])
+        print("Created At  = ", row[3], "\n")
+    
+
+    # cursor = connection.cursor()
 
     return render_template('dashboard.html', params=params)
+   
+
+
+
+
+
+
+# @app.route("/login", methods = ['GET','POST'])
+# def login():
+#     if request.method == 'GET':
+#         return "login via the login form"
+#     if request.method == 'POST':
+#         id = request.form['id']
+#         name = request.form['name']
+#         email = request.form['email']
+#         age = request.form['email']
+#         height = request.form['height']
+#         weight = request.form['weight']
+#         gender = request.form['gender']
+#         password = request.form['password']
+#         created_at = request.form['created_at']
+
+#         cursor = mysql.connection.cursor()
+#         cursor.execute(users (id, name, email, age, height, weight, gender, password))
+
+#         cursor.execute(users VALUES(%d, %s, %s, %s, %s, %s, %s, %s), (id, name, email, age, height, weight, gender, password))
+
+#         mysql.connection.commit()
+#         cursor.close()
+
+#     return render_template('login.html', params=params)
+
+
+

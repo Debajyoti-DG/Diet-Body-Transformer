@@ -187,7 +187,8 @@ def home():
                           body = "Hello this is a mail from DRS to test if there is error in authenticaton SMTP. \n If you are reading this then your : " + "\nHeight : " + height + " cms"  # type: ignore
                           )
 
-    return "Hello"
+    # return "Hello"
+    return render_template('index.html', params=params)
 
 # CORS 
 
@@ -210,13 +211,13 @@ def barriers():
 def dashboard():
 
     print("Hello Dashboard")
-    connection = MySQLdb.connect(host='localhost',database='diet',user='root',password='')
+    connection = MySQLdb.connect(host='localhost',database='diet_body_transformer',user='root',password='')
     sql_select_Query = "select * from users"
     print("next")
 
     cursor = connection.cursor()
     cursor.execute(sql_select_Query)
-
+    print("Checking...............")
 
     records = cursor.fetchall()
     print("Total number of rows in table: ", cursor.rowcount)
@@ -225,8 +226,8 @@ def dashboard():
     for row in records:
         print("Id = ", row[0], )
         print("Name = ", row[1])
-        print("Password  = ", row[2])
-        print("Created At  = ", row[3], "\n")
+        print("Email  = ", row[2])
+        print("Password  = ", row[3], "\n")
     
 
     # cursor = connection.cursor()

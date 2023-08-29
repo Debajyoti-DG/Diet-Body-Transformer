@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRS-179</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Rajdhani:wght@600&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <h3>Hi we are {{params['name']}}</h3> -->
+    <div class="container">
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/roadmap">Roadmap</a></li>
+                <li><a href="/">Diet</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Others</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container" id="home">
+        <div class="header">
+            <h2>WELCOME TO DRS-179</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eveniet minima. Dolorum doloribus ut quas mollitia adipisci? Beatae, ipsam quas.</p>
+            <div id="button">
+                <button id="show-signup"><a href="#myForm">Sign Up</a></button>
+                <!-- <button id="show-login"><a href="#login">Log In</a></button> -->
+                <button id="show-login">Log In</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="popup" id="login">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email-popup" placeholder="Enter your email" required>
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password-popup" placeholder="Enter password" required>
+            </div>
+            <div class="form-element">
+                <label for="remember-me">Remember me</label>
+                <input type="checkbox" id="remember-me" required>
+            </div>
+            <div class="form-element">
+                <!-- Point to the address remaining -->
+                <button id="redirectButton" onclick="returnFunc()">Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="form-container">
+        <div class="container" id="form">
+            <h1>Your Form</h1>
+            <div class="profile">
+                <form id = "myForm" action="/" method="post">
+                    <div class="form-group">
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" id="name" value="Test Name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email : </label>
+                        <input type="text" name="email" value="test@test.mail" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password : </label>
+                        <input type="password" name="password" value="sjygsjy#dfj@" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age: </label>
+                        <input type="number" name="age" id="age" value="12" placeholder="Enter your age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height : </label>
+                        <input type="number" name="height" id="height" value="25" placeholder="Enter your height(in cm)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight : </label>
+                        <input type="number" name="weight" id="weight" value="56" placeholder="Enter your weight(in kg)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender: </label>
+                        <select name="gender" id="gender" required> 
+                            <option selected value="Male">Male</option> 
+                            <option value="Female">Female</option> 
+                            <option value="Transgender">Transgender</option> 
+                            <option value="Non-Binary">Non-Binary</option> 
+                        </select>
+                        <!-- <input type="text" name="gender" id="gender" placeholder="Enter your gender"> -->
+                    </div>
+                    <!-- <div>
+                        Gender: <input type="radio" name="myGender"> Male
+                        <input type="radio" name="myGender"> Female
+                        <input type="radio" name="myGender"> Other
+                    </div> -->
+                    <div class="form-group" id="submit">
+                        <input type="submit" value="Submit Now" onclick="window.location.href = '/roadmap' ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/static/server.js"></script>
+</body>
+
+</html>

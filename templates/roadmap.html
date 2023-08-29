@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Tektur:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Rajdhani:wght@600&family=Tektur:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/roadmap">Roadmap</a></li>
+                <li><a href="/">Diet</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Others</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="heading">
+        <div class="roadmap-heading">
+            <p id="bigger">Setting Up Personalised Roadmap</p>
+            <p id="ask-goal">What is your Goal ?</p>
+        </div>
+    </div>
+
+    
+        <div class="roadmap-container row" id="row-1">
+            <div class="goal active-1" id="item-1"><p><a href="#secondary" onclick="show_hide()">Gain Weight</a></p></div>
+            <div class="goal active-1" id="item-2"><p><a href="#secondary" onclick="show_hide()">Lose Weight</a></p></div>
+        </div>
+    
+        <section class="secondary" id="row-2" style="display: none;">
+            <div class="roadmap-container row">
+                    <div class="goal active" id="item-heading">Choose Your Secondary Mission</div>
+                    <div class="goal active-2" id="item-3"><p><a href="/">Build Muscle</a></p></div>
+                    <div class="goal active-2" id="item-4"><p><a href="/">Get Fit</a></p></div>
+                    <div class="goal active-2" id="item-5"><p><a href="/">Be Flexy</a></p></div>
+                    <div class="goal active-2" id="item-6"><p><a href="/barriers">submit now</a></p></div>
+                </div>
+        </section>
+    </div>
+   
+    <script src="/static/server.js"></script>
+</body>
+</html>

@@ -141,6 +141,18 @@ class users(db.Model):
 
     print(sql_Query)
 
+
+
+
+
+
+# class Choices(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     title = db.Column(db.String(50), nullable=False)
+#     slug = db.Column(db.String(20), nullable=False)
+#     content = db.Column(db.String(50), nullable=False)
+    
+
 # if(local_server):
 #     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 # else:
@@ -187,7 +199,8 @@ def home():
                           body = "Hello this is a mail from DRS to test if there is error in authenticaton SMTP. \n If you are reading this then your : " + "\nHeight : " + height + " cms"  # type: ignore
                           )
 
-    # return "Hello"
+    # return "hello"
+
     return render_template('index.html', params=params)
 
 # CORS 
@@ -207,6 +220,36 @@ def barriers():
     # return "<p>Hello, World!!!!!</p>"
     return render_template('barriers.html', params=params)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# @app.route("/choice/id", methods = ['GET'])
+# def test(id):
+#     choice = Choices.query.filter_by(slug=id).first()
+#     return render_template('choice.html', params=params, choice=choice)
+
+
+
+
+
+
+
+
+
+
+
+
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
 
@@ -217,7 +260,7 @@ def dashboard():
 
     cursor = connection.cursor()
     cursor.execute(sql_select_Query)
-    print("Checking...............")
+
 
     records = cursor.fetchall()
     print("Total number of rows in table: ", cursor.rowcount)
@@ -226,8 +269,8 @@ def dashboard():
     for row in records:
         print("Id = ", row[0], )
         print("Name = ", row[1])
-        print("Email  = ", row[2])
-        print("Password  = ", row[3], "\n")
+        print("Password  = ", row[2])
+        print("Created At  = ", row[3], "\n")
     
 
     # cursor = connection.cursor()

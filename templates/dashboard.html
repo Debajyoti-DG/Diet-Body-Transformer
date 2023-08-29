@@ -31,9 +31,21 @@
     </div>
 
 
-    <h1>This is the Dashboard</h1>
+    <div class="dash-container">
+        <h1>Hello, user! Glad to have you here.</h1>
+        <p>Here you will be able to see all your performance related stats</p>
+        <div class="para">
+            Your performance analytics : <span id="analytics" onclick="view()" style="display: none;"></span>
+        </div>
+        <div class="para">
+            Your successful working days : <span id="days" onclick="view()" style="display: none;"></span>
+        </div>
+        <div id="review"></div>
+    </div>
 
-    <script src="/static/server.js"></script>
+
+    
+    <script src="/static/barserver.js"></script>
 </body>
 
 </html>

@@ -182,6 +182,7 @@ class users(db.Model):
 
 @app.route("/", methods = ['GET', 'POST'])
 def home():
+    email = ""
     if (request.method == 'POST'):
         name = request.form.get('name')
         email = request.form.get('email')
@@ -199,9 +200,11 @@ def home():
                           body = "Hello this is a mail from DRS to test if there is error in authenticaton SMTP. \n If you are reading this then your : " + "\nHeight : " + height + " cms"  # type: ignore
                           )
 
-    # return "hello"
 
-    return render_template('index.html', params=params)
+    response = {'status':'success', 'email':email};
+    
+
+    return 'se'
 
 # CORS 
 

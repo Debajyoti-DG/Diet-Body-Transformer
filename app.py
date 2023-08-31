@@ -36,78 +36,12 @@ app.config.update(
 )
 mail = Mail(app)
 
-
-
-
-
-#code for connection
-#MySQL Hostname
-# app.config['MYSQL_HOST'] = 'localhost'
-#MySQL username
-# app.config['MYSQL_USER'] = 'root'
-#MySQL password here in my case password is null so i left empty
-# app.config['MYSQL_PASSWORD'] = ''
 # Database name In my case database name is projectreporting
-
-
-
-
 app.config['MYSQL_DB'] = 'diet_body_transformer'
 
 mysql = MySQL(app)
 
 # cursor = mysql.connection.cursor()
-
-
-
-
-
-# if request.method == 'POST':
-
-
-#COPIED DOWN UNDER /LOGIN BELOW
-
-# id = request.form['id']
-# name = request.form['name']
-# email = request.form['email']
-# age = request.form['email']
-# height = request.form['height']
-# weight = request.form['weight']
-# gender = request.form['gender']
-# password = request.form['password']
-# created_at = request.form['created_at']
-
-
-
-
-
-
-
-# cursor.execute(
-#     users (id, name, email, age, height, weight, gender, password))
-# cursor.execute(
-#     users VALUES(%d, %s, %s, %s, %s, %s, %s, %s), (id, name, email, age, height, weight, gender, password)
-# )
-
-# mysql.connection.commit()
-# cursor.close()
-
-
-# @app.route('/')
-# @app.route('/dashboard',methods=['GET','POST'])
-# def projectlist():
-
-
-    #placed in dashboard
-
-    # #creating variable for connection
-    # cursor=mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    # #executing query
-    # cursor.execute("select * from pro_reg")
-    # #fetching all records from database
-    # data=cursor.fetchall()
-
-
 
 
 if(local_server):
@@ -140,42 +74,6 @@ class users(db.Model):
    
 
     print(sql_Query)
-
-
-
-
-
-
-# class Choices(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String(50), nullable=False)
-#     slug = db.Column(db.String(20), nullable=False)
-#     content = db.Column(db.String(50), nullable=False)
-    
-
-# if(local_server):
-#     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
-# else:
-#     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
-
-# db = SQLAlchemy(app)
-
-
-
-
-
-# class choices(db.Model):
-
-#     '''
-#     gain_weight lose_weight build_muscle get_fit be_flexy
-#     '''
-#     # id = db.Column(db.Integer, primary_key=True)
-#     gain_weight = db.Column(db.String(15), unique=False)
-#     lose_weight = db.Column(db.String(15), unique=False)
-#     build_muscle = db.Column(db.String(15), unique=False)
-#     get_fit = db.Column(db.String(15), unique=False)
-#     be_flexy = db.Column(db.String(15), unique=False)
-
 
 
 
@@ -221,36 +119,7 @@ def contact():
 @app.route("/barriers")
 def barriers():
     # return "<p>Hello, World!!!!!</p>"
-    return render_template('barriers.html', params=params)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# @app.route("/choice/id", methods = ['GET'])
-# def test(id):
-#     choice = Choices.query.filter_by(slug=id).first()
-#     return render_template('choice.html', params=params, choice=choice)
-
-
-
-
-
-
-
-
-
-
+    return render_template('barriers.html', params=params_
 
 
 @app.route("/dashboard", methods = ['GET', 'POST'])

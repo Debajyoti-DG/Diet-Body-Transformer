@@ -1,4 +1,4 @@
-from flask import Flask, request, session, make_response
+from flask import Flask, request, session, make_response,render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 import json
@@ -18,6 +18,10 @@ app.config['SECRET_KEY'] = 'hdWEFUWFW$634W32'
 
 Session(app)
 db = SQLAlchemy(app)
+
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
+
 
 
 # print('My session: ',session.get('')) # null
@@ -70,7 +74,7 @@ def home():
     elif request.method == "GET":
         response.status_code = 404
     
-    return response
+    return render_template('index.html', params = params)
 
 
 

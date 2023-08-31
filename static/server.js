@@ -109,6 +109,15 @@
 function show_hide() {
     var x = document.getElementById('row-2');
     // let y = document.getElementById('item')
+
+    // if (a == 1){
+
+    // }
+    // else if(b == 2){
+
+    // }
+
+
     if (x.style.display == 'none') {
         x.style.display = 'flex';
         x.style.justifyContent = 'center';
@@ -122,16 +131,24 @@ function show_hide() {
     }
 }
 
-document.querySelector("#show-login").addEventListener("click", function () {
+
+
+document.querySelector("#show-login").addEventListener("click", () => {
     console.log("Clicked...")
     document.querySelector(".popup").classList.add("active");
 });
 
-document.querySelector(".popup .close-btn").addEventListener("click", function () {
+document.querySelector(".popup .close-btn").addEventListener("click", () => {
     document.querySelector(".popup").classList.remove("active");
 });
 
 document.getElementById("redirectButton").addEventListener("click", () => {
     // if ()
-    window.location = "/roadmap";
+    window.location = "/roadmap.html";
 });
+
+
+// document.getElementById("submitBtn").addEventListener("click", () => {
+//     // window.location = "/barriers.html";
+//     console.log("Clicked........");
+// })

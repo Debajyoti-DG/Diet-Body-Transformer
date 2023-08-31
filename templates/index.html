@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRS-179</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Tektur:wght@500&display=swap"
         rel="stylesheet">
@@ -21,11 +21,11 @@
         <nav id="navbar">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/roadmap">Roadmap</a></li>
-                <li><a href="/">Diet</a></li>
+                <li><a href="/roadmap.html">Roadmap</a></li>
+                <li><a href="/">Services</a></li>
                 <li><a href="/">About</a></li>
-                <li><a href="/">Others</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/"></a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </div>
@@ -33,7 +33,8 @@
     <div class="container" id="home">
         <div class="header">
             <h2>WELCOME TO DRS-179</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eveniet minima. Dolorum doloribus ut quas mollitia adipisci? Beatae, ipsam quas.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eveniet minima. Dolorum doloribus ut quas
+                mollitia adipisci? Beatae, ipsam quas.</p>
             <div id="button">
                 <button id="show-signup"><a href="#myForm">Sign Up</a></button>
                 <!-- <button id="show-login"><a href="#login">Log In</a></button> -->
@@ -76,18 +77,21 @@
         <div class="container" id="form">
             <h1>Your Form</h1>
             <div class="profile">
-                <form id = "myForm" action="/" method="post">
+                <form id="myForm"  method="post">
                     <div class="form-group">
                         <label for="name">Name : </label>
-                        <input type="text" name="name" id="name" value="Test Name" placeholder="Enter your name" required>
+                        <input type="text" name="name" id="name" value="Test Name" placeholder="Enter your name"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email : </label>
-                        <input type="text" name="email" value="test@test.mail" id="email" placeholder="Enter your email" required>
+                        <input type="text" name="email" value="test@test.mail" id="email" placeholder="Enter your email"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password : </label>
-                        <input type="password" name="password" value="sjygsjy#dfj@" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="password" value="sjygsjy#dfj@" id="password"
+                            placeholder="Enter your password" required>
                     </div>
                     <div class="form-group">
                         <label for="age">Age: </label>
@@ -95,19 +99,21 @@
                     </div>
                     <div class="form-group">
                         <label for="height">Height : </label>
-                        <input type="number" name="height" id="height" value="25" placeholder="Enter your height(in cm)" required>
+                        <input type="number" name="height" id="height" value="25" placeholder="Enter your height(in cm)"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="weight">Weight : </label>
-                        <input type="number" name="weight" id="weight" value="56" placeholder="Enter your weight(in kg)" required>
+                        <input type="number" name="weight" id="weight" value="56" placeholder="Enter your weight(in kg)"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="gender">Gender: </label>
-                        <select name="gender" id="gender" required> 
-                            <option selected value="Male">Male</option> 
-                            <option value="Female">Female</option> 
-                            <option value="Transgender">Transgender</option> 
-                            <option value="Non-Binary">Non-Binary</option> 
+                        <select name="gender" id="gender" required>
+                            <option selected value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Transgender">Transgender</option>
+                            <option value="Non-Binary">Non-Binary</option>
                         </select>
                         <!-- <input type="text" name="gender" id="gender" placeholder="Enter your gender"> -->
                     </div>
@@ -117,13 +123,14 @@
                         <input type="radio" name="myGender"> Other
                     </div> -->
                     <div class="form-group" id="submit">
-                        <input type="submit" value="Submit Now" onclick="window.location.href = '/roadmap' ">
+                        <button id="submitBtn">Submit now</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    <script src="/static/server.js"></script>
+    <!-- <script src="/server.js"></script> -->
+    <script src="/server.js"></script>
 </body>
 
 </html>

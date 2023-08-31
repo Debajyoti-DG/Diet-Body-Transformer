@@ -1,0 +1,163 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
+#navbar{
+    background-color: black;
+    opacity: 0.75;
+    display: flex;
+    position: sticky;
+    /* z-index: -1; */
+    width: 100dvw;
+}
+nav{
+    display: flex;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    /* background-color: black;
+    opacity: 0.75;
+    width: 100vw; */
+    /* color: white; */
+}
+#navbar li{
+    padding: 23px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#navbar li a{
+    padding: 13px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    /* font-family: 'Tektur', cursive; */
+    /* font-family: 'Lugrasimo', cursive; */
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+#navbar li a:hover{
+    color: rgb(192, 194, 165);
+}
+
+#navbar li:nth-child(6){
+    display: inline-block ;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+}
+#navbar li:nth-child(1){
+    margin-left: 3rem;
+}
+
+h1{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#head{
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    margin-top: 4rem;
+    font-size: 6rem;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#head::before {
+    content: "";
+    background: url('/img/background7.jpg') no-repeat center center/cover !important;
+    position: absolute;
+    height: 502px;
+    /* height: 100%; */
+    width: 100%;
+    top: 0px;
+    left: 0px; 
+    opacity: 0.88;
+    filter: blur(3px);
+    z-index: -2;
+}
+
+.no-style{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div > p{
+    margin: 20px;
+}
+.top-space{
+    margin: 20px;
+}
+
+p > li{
+    padding: 100px;
+}
+
+.broad{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#item-1,#item-2,#item-3,#item-4{
+    padding-top: 3rem;
+    padding-left: 30px;
+    padding: 70px;
+}
+.food{
+    margin-right: 70px;
+}
+
+div{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+}
+
+#item-1{
+    background-color: rgb(250, 240, 224);
+    z-index: -2;
+    /* margin-top: -15px; */
+}
+#item-2{
+    background-color: rgb(250, 224, 224);
+    z-index: -2;
+    margin-top: 5px;
+}
+#item-3{
+    background-color: rgb(230, 244, 250);
+    z-index: -2;
+    margin-top: 5px;
+}
+#item-4{
+    background-color: rgb(233, 230, 230);
+    z-index: -2;
+    margin-top: 5px;
+}
+#item-1 h1,#item-2 h1,#item-3 h1,#item-4 h1{
+    text-align: center;
+}
+
+.plan-btn{
+    margin-bottom: 20px;
+}

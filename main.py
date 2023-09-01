@@ -8,6 +8,19 @@ from flask_session import Session
 app = Flask(__name__)
 CORS(app)
 
+with open('config.json', 'r') as c:
+    params = json.load(c)["params"]
+
+app.config.update(
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = '465',
+    MAIL_USE_SSL = True,
+    MAIL_USERNAME = params['gmail_user'],
+    MAIL_PASSWORD = params['gmail_password'],
+    SQLALCHEMY_DATABASE_URI = 'diet_body_transformer',
+    SECRET_KEY = 'FSDFFS2748347ybfjdkFhsfziugcfgtghfxl'
+)
+mail = Mail(app)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = 'filesystem'
 
@@ -19,8 +32,6 @@ app.config['SECRET_KEY'] = 'hdWEFUWFW$634W32'
 Session(app)
 db = SQLAlchemy(app)
 
-with open('config.json', 'r') as c:
-    params = json.load(c)["params"]
 
 
 
@@ -65,6 +76,12 @@ def home():
         entry = User(name=name, email=email, height=height, weight=weight, age=age, gender=gender, password=password_user)
         db.session.add(entry)
         db.session.commit()
+
+        mail.send_message('New message from ' + params['name'], 
+                          sender = email, recipients = [params['gmail_user']], 
+                          body = "Hello this is a mail from DRS . \n If you are reading this then your : " + "\nEmail : " + email + "\n. " + "We are glad that you decided to be a part of our community. We will launch a more user friendly version soon. This is where we will notify you about further updates. Stay tuned !" # type: ignore
+                          )
+
 
         response.set_cookie('email',request.form.get('email'))
 
@@ -138,3 +155,9 @@ def choice_user():
     
     return json.dumps(response_json)
 
+@app.route("/barriers", methods = ['GET','POST'])
+def barriers():
+    return render_template('barriers.html',params=params)
+@app.route("/dashboard", methods = ['GET','POST'])
+def dashboard():
+    return render_template('dashboard.html',params=params)

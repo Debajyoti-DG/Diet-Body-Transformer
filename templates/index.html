@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRS-179</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Bangers&family=DM+Sans:ital@1&family=Lato&family=Lilita+One&family=Lobster&family=Lugrasimo&family=Merienda:wght@600;900&family=Tektur:wght@500&display=swap"
         rel="stylesheet">
@@ -77,11 +77,15 @@
         <div class="container" id="form">
             <h1>Your Form</h1>
             <div class="profile">
-                <form id="myForm"  method="post">
+                <form id="myForm" action="/" method="post">
                     <div class="form-group">
                         <label for="name">Name : </label>
                         <input type="text" name="name" id="name" value="Test Name" placeholder="Enter your name"
                             required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age: </label>
+                        <input type="number" name="age" id="age" value="12" placeholder="Enter your age" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email : </label>
@@ -92,10 +96,6 @@
                         <label for="password">Password : </label>
                         <input type="password" name="password" value="sjygsjy#dfj@" id="password"
                             placeholder="Enter your password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="age">Age: </label>
-                        <input type="number" name="age" id="age" value="12" placeholder="Enter your age" required>
                     </div>
                     <div class="form-group">
                         <label for="height">Height : </label>
@@ -122,7 +122,7 @@
                         <input type="radio" name="myGender"> Female
                         <input type="radio" name="myGender"> Other
                     </div> -->
-                    <div class="form-group" id="submit">
+                    <div class="form-group middle" id="submit">
                         <button id="submitBtn">Submit now</button>
                     </div>
                 </form>
@@ -130,7 +130,7 @@
         </div>
     </section>
     <!-- <script src="/server.js"></script> -->
-    <script src="/server.js"></script>
+    <script src="/static/server.js"></script>
 </body>
 
 </html>

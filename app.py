@@ -102,7 +102,7 @@ def home():
     response = {'status':'success', 'email':email};
     
 
-    return 'se'
+    return render_template('index.html', params=params)
 
 # CORS 
 
@@ -119,7 +119,7 @@ def contact():
 @app.route("/barriers")
 def barriers():
     # return "<p>Hello, World!!!!!</p>"
-    return render_template('barriers.html', params=params_
+    return render_template('barriers.html', params=params)
 
 
 @app.route("/dashboard", methods = ['GET', 'POST'])

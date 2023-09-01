@@ -146,6 +146,10 @@ document.getElementById("redirectButton").addEventListener("click", () => {
     // if ()
     window.location = "/roadmap.html";
 });
+document.getElementById("submitBtn").addEventListener("click", () => {
+    // if ()
+    window.location = "/dashboard.html";
+});
 
 
 // document.getElementById("submitBtn").addEventListener("click", () => {

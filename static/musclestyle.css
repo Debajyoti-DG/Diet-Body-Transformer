@@ -86,7 +86,7 @@ h1{
 
 #head::before {
     content: "";
-    background: url('/img/background11.jpg') no-repeat center center/cover !important;
+    background: url('/static/img/background11.jpg') no-repeat center center/cover !important;
     position: absolute;
     height: 702px;
     /* height: 100%; */

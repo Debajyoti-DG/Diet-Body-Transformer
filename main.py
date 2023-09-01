@@ -158,6 +158,27 @@ def choice_user():
 @app.route("/barriers", methods = ['GET','POST'])
 def barriers():
     return render_template('barriers.html',params=params)
+
 @app.route("/dashboard", methods = ['GET','POST'])
 def dashboard():
     return render_template('dashboard.html',params=params)
+
+@app.route("/roadmap", methods = ['GET','POST'])
+def roadmap():
+    return render_template('roadmap.html',params=params)
+
+@app.route("/get_fit", methods = ['GET','POST'])
+def get_fit():
+    return render_template('get_fit.html',params=params)
+
+@app.route("/be_flexy", methods = ['GET','POST'])
+def be_flexy():
+    return render_template('be_flexy.html',params=params)
+
+@app.route("/build_muscle", methods = ['GET','POST'])
+def build_muscle():
+    return render_template('build_muscle.html',params=params)
+
+@app.route("/contact", methods = ['GET','POST'])
+def contact():
+    return render_template('contact.html',params=params)

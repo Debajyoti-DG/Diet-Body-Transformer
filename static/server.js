@@ -144,12 +144,27 @@ document.querySelector(".popup .close-btn").addEventListener("click", () => {
 
 document.getElementById("redirectButton").addEventListener("click", () => {
     // if ()
-    window.location = "/roadmap.html";
+    window.location = "/dashboard";
 });
-document.getElementById("submitBtn").addEventListener("click", () => {
-    // if ()
-    window.location = "/dashboard.html";
-});
+
+// document.getElementById("submitBtn").addEventListener("click", () => {
+//     var y = document.getElementById("sub-form")
+
+//     if (x.style.display == 'none') {
+//         x.style.display = 'inline-flex';
+//         x.style.justifyContent = 'center';
+//         x.style.alignItems = 'center';
+
+//         // After opening the bottom section
+//         // console.log(window.outerHeight)
+
+//         // window.scrollTo(0, window.outerHeight)
+//     } else {
+//         x.style.display = 'none';
+//     }
+
+//     window.location = "/dashboard";
+// });
 
 
 // document.getElementById("submitBtn").addEventListener("click", () => {
